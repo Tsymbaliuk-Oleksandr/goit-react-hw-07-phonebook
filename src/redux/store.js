@@ -1,4 +1,16 @@
-//Було//////////////////////////////////////////////////////////
+import { configureStore } from '@reduxjs/toolkit';
+import contactsReducer from './contactsSlice';
+import filterReducer from './filterSlice';
+
+export const store = configureStore({
+  reducer: {
+    filter: filterReducer,
+    contacts: contactsReducer,
+  },
+});
+
+export default store;
+
 // import { configureStore } from '@reduxjs/toolkit';
 // import {
 //   persistStore,
@@ -10,6 +22,7 @@
 //   REGISTER,
 // } from 'redux-persist';
 // import { persistedReducer } from './contactsSlice';
+
 // export const store = configureStore({
 //   reducer: persistedReducer,
 //   middleware: getDefaultMiddleware =>
@@ -19,18 +32,5 @@
 //       },
 //     }),
 // });
+
 // export const persistor = persistStore(store);
-//Стало//////////////////////////////////////////////////////////
-
-import { configureStore } from '@reduxjs/toolkit';
-import { contactsReducer } from './contactsSlice';
-import filterReducer from './filterSlice';
-
-export const store = configureStore({
-  reducer: {
-    filter: filterReducer,
-    contacts: contactsReducer,
-  },
-});
-
-// export default store;

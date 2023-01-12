@@ -45,10 +45,9 @@ export const contactsSlice = createSlice({
     },
   },
 });
-export const contactsReducer = contactsSlice.reducer;
-// export default contactsSlice.reducer;
 
-//Було////////////////////////////////////
+export default contactsSlice.reducer;
+
 // import { createSlice } from '@reduxjs/toolkit';
 // import { persistReducer } from 'redux-persist';
 // import storage from 'redux-persist/lib/storage';

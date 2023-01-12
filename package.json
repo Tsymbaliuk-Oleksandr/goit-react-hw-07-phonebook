@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://Tsymbaliuk-Oleksandr.github.io/goit-react-hw-07-phonebook/",
   "dependencies": {
+    "@redux-devtools/extension": "^3.2.3",
     "@reduxjs/toolkit": "^1.9.1",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",

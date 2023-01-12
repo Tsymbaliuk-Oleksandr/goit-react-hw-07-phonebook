@@ -15,4 +15,3 @@ export const addContactApi = async contact => {
 export const removeContactApi = id => {
   return axios.delete(`/contacts/${id}`);
 };
-// https://mockapi.io/clone/63be789ce348cb07620f779b?
