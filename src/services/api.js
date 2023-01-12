@@ -4,7 +4,7 @@ axios.defaults.baseURL = 'https://63be789ce348cb07620f779a.mockapi.io';
 
 export const fetchContactsApi = async () => {
   const resp = await axios.get('/contacts');
-  return resp.data.map(({ id, name, phone }) => ({ id, name, phone }));
+  return resp.data.map(({ id, name, number }) => ({ id, name, number }));
 };
 
 export const addContactApi = async contact => {

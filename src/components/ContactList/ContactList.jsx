@@ -9,6 +9,7 @@ const ContactList = () => {
   const dispatch = useDispatch();
 
   const contacts = useSelector(getContacts);
+  // console.log(contacts);
   const filter = useSelector(getFilter);
 
   const filteredContacts = contacts.filter(e =>
@@ -21,13 +22,13 @@ const ContactList = () => {
 
   return (
     <Box display="flex" flexDirection="column" p="0px" as="ul">
-      {filteredContacts.map(({ id, name, phone }) => {
+      {filteredContacts.map(({ id, name, number }) => {
         return (
           <ContactItem
             key={id}
             id={id}
             name={name}
-            phone={phone}
+            number={number}
             deleteContact={deleteContact}
           />
         );

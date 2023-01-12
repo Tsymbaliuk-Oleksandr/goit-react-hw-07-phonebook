@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { Box } from 'components/Box';
 import { Name, Number } from './ContactItem.styled';
 
-export const ContactItem = ({ id, name, phone, deleteContact }) => {
+export const ContactItem = ({ id, name, number, deleteContact }) => {
   return (
     <Box display="flex" justifyContent="space-between" alignItems="center">
       <div>
         <Name>{name}:</Name>
-        <Number>{phone}</Number>
+        <Number>{number}</Number>
       </div>
       <Button type="button" handleFunc={() => deleteContact(id)}>
         Delete
@@ -22,6 +22,6 @@ export const ContactItem = ({ id, name, phone, deleteContact }) => {
 ContactItem.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  phone: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
   deleteContact: PropTypes.func.isRequired,
 };
